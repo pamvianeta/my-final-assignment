@@ -5,8 +5,10 @@ description = "A source-grounded research assistant: cites its sources, refuses 
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+  "anthropic>=1.11.0",
   # The Dev3Pack course package, from the public cohort repository:
-  "dev3pack-bootcamp-ai-engineering @ git+https://github.com/mario-c-s/dev3pack-cohort-2026-09.git@main",
+  "dev3pack-bootcamp-ai-engineering @ git+https://github.com/Gecko-Academy/dev3pack-cohort-2026-09.git@main",
+  "openai>=3.24.0",
 ]
 
 [project.optional-dependencies]

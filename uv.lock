@@ -51,7 +51,9 @@ name = "capstone-template"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "anthropic" },
     { name = "dev3pack-bootcamp-ai-engineering" },
+    { name = "openai" },
 ]
 
 [package.optional-dependencies]
@@ -70,8 +72,10 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "anthropic", specifier = ">=1.11.0" },
     { name = "anthropic", marker = "extra == 'anthropic'", specifier = ">=0.40" },
     { name = "dev3pack-bootcamp-ai-engineering", git = "https://github.com/Gecko-Academy/dev3pack-cohort-2026-09.git?rev=main" },
+    { name = "openai", specifier = ">=3.24.0" },
     { name = "openai", marker = "extra == 'openai'", specifier = ">=1.40" },
 ]
 provides-extras = ["anthropic", "openai"]
