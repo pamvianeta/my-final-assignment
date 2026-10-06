@@ -1,0 +1,36 @@
+[project]
+name = "capstone-template"
+version = "0.1.0"
+description = "A source-grounded research assistant: cites its sources, refuses what they do not support."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  # The Dev3Pack course package, from the public cohort repository:
+  "dev3pack-bootcamp-ai-engineering @ git+https://github.com/mario-c-s/dev3pack-cohort-2026-09.git@main",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.40"]
+openai = ["openai>=1.40"]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".course"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
